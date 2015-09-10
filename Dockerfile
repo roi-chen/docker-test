@@ -1,2 +1,3 @@
-FROM ubuntu:14.04
-MAINTAINER roi roichen.sg@gmail.com
+FROM docker/whalesay:latest
+RUN apt-get -y update & apt-get install -y fortunes
+CMD /usr/games/fortune -a | cowsay
